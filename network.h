@@ -55,7 +55,7 @@ typedef struct ipv6{
 	unsigned char ip6_src_addr[16];
 	unsigned char ip6_dst_addr[16];
 	
-}ipv6
+}ipv6;
 
 typedef struct icmp_pkt{
 	unsigned char type;
