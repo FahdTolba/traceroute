@@ -45,6 +45,18 @@ typedef struct ipv4{
 	unsigned int dest_addr;
 }ipv4;
 
+typedef struct ipv6{
+	unsigned int flw_lbl:20,
+			trfc_class:8,
+			ip_version:4;
+	unsigned short payload_len;
+	unsigned char nxt_hdr;
+	unsigned char hop_lmt;
+	unsigned char ip6_src_addr[16];
+	unsigned char ip6_dst_addr[16];
+	
+}ipv6
+
 typedef struct icmp_pkt{
 	unsigned char type;
 	unsigned char code;
@@ -53,5 +65,6 @@ typedef struct icmp_pkt{
 	unsigned short seq;
 	char data[MAXDATA];
 }icmp_pkt;
+
 
 
